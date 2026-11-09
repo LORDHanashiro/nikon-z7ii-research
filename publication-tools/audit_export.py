@@ -3,6 +3,10 @@ from pathlib import Path
 import ast, collections, hashlib, json, re, subprocess, sys
 from safe_export import SECRET, HOME, ASM_LINE, INLINE_PAIR, BYTE_RUN, DENY_EXT, DROP_KEYS
 
+# Audit concrete home paths without mistaking a regex definition for a username.
+# Keep the published sanitizer policy unchanged so replayed history stays stable.
+AUDIT_HOME=re.compile(r'/home/\w[^/\s"\'<>`]*|/mnt/[a-z]/Users/[^/\s"\'<>`]+|[A-Z]:\\Users\\[^\\\s"\'<>`]+')
+
 def run(repo,*args,data=None):
     return subprocess.run(['git','-C',str(repo),*args],input=data,stdout=subprocess.PIPE,stderr=subprocess.PIPE,check=True).stdout
 def audit(repo,kind,report):
@@ -17,7 +21,7 @@ def audit(repo,kind,report):
         elif ref not in allowed:problems.append({'type':'unexpected-ref','ref':ref})
     for c in commits:
         obj=run(repo,'cat-file','-p',c).decode()
-        if SECRET.search(obj) or HOME.search(obj):problems.append({'type':'commit-metadata-sensitive-pattern','commit':c})
+        if SECRET.search(obj) or AUDIT_HOME.search(obj):problems.append({'type':'commit-metadata-sensitive-pattern','commit':c})
         for item in run(repo,'ls-tree','-r','-z',c).split(b'\0'):
             if not item:continue
             left,p=item.split(b'\t',1);mode,t,oid=left.decode().split();path=p.decode();entries.append((c,path,oid))
@@ -31,7 +35,7 @@ def audit(repo,kind,report):
         if n>2_000_000 or b'\0' in b:problems.append({'type':'binary-or-large','path':path,'blob':oid});continue
         try:s=b.decode()
         except UnicodeDecodeError:problems.append({'type':'nonutf8','path':path});continue
-        for name,pat in [('credential',SECRET),('personal-absolute-path',HOME)]:
+        for name,pat in [('credential',SECRET),('personal-absolute-path',AUDIT_HOME)]:
             if pat.search(s):problems.append({'type':name,'path':path,'blob':oid})
         if any(ASM_LINE.search(l) for l in s.splitlines()):problems.append({'type':'instruction-byte-listing','path':path,'blob':oid})
         if BYTE_RUN.search(s):problems.append({'type':'spaced-byte-excerpt','path':path,'blob':oid})
