@@ -145,8 +145,8 @@
     },
     {
       "path": "publication-tools/sync.py",
-      "bytes": 18811,
-      "sha256": "df8c129c987e14886a43d403c7d1d80b3dbe164a093cf54d7153ff3446bb7dd9"
+      "bytes": 18903,
+      "sha256": "babce12594755f82b19d57e80d98e12180570e19d3bd2f04c24d71e9974b1495"
     },
     {
       "path": "publication-tools/templates/TESTING.md",

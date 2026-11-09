@@ -13,10 +13,12 @@ def git(repo,*args,check=True):return call(['git','-C',str(repo),*args],check=ch
 def dump(p,obj):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n')
 def bundle(repo):
     out=repo/'publication-tools';out.mkdir(exist_ok=True)
-    for n in MANAGER_FILES:shutil.copyfile(BUNDLE/n,out/n)
+    for n in MANAGER_FILES:
+        if (BUNDLE/n).resolve()!=(out/n).resolve():shutil.copyfile(BUNDLE/n,out/n)
     for p in (BUNDLE/'templates').rglob('*'):
         if p.is_file():
-            q=out/'templates'/p.relative_to(BUNDLE/'templates');q.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,q)
+            q=out/'templates'/p.relative_to(BUNDLE/'templates');q.parent.mkdir(parents=True,exist_ok=True)
+            if p.resolve()!=q.resolve():shutil.copyfile(p,q)
 
 def files(repo):
     result=[]
