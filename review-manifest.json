@@ -130,8 +130,8 @@
     },
     {
       "path": "publication-tools/audit_export.py",
-      "bytes": 5784,
-      "sha256": "2861e9a363ecaca1dbebf07f214644a138a80a1ee923a57328109a9a0daee2d1"
+      "bytes": 6087,
+      "sha256": "178fbfb3c865712ba724c8df0e03e310e81ba6280199c3d69b0a7ed51eb0c52e"
     },
     {
       "path": "publication-tools/build_public.py",
@@ -140,8 +140,8 @@
     },
     {
       "path": "publication-tools/safe_export.py",
-      "bytes": 14038,
-      "sha256": "a720593d1d4fd2a4ed4e8e956390cd9251f584104a7a221ee2c8e554c45cab55"
+      "bytes": 14040,
+      "sha256": "48ce3662dfcdf8294f119071a1379184921bec6e429e5305c073d81105763f0e"
     },
     {
       "path": "publication-tools/sync.py",

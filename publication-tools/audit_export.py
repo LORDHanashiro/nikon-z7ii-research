@@ -55,7 +55,9 @@ def audit(repo,kind,report):
         if path.endswith('.py'):
             try:tree=ast.parse(s)
             except SyntaxError:problems.append({'type':'invalid-python','path':path});continue
-            if 'Sanitized historical source: restore local firmware reference' in s:reference_disabled.add(path)
+            for node in tree.body:
+                if isinstance(node,ast.Raise) and isinstance(node.exc,ast.Call) and isinstance(node.exc.func,ast.Name) and node.exc.func.id=='RuntimeError' and any(isinstance(a,ast.Constant) and isinstance(a.value,str) and a.value.startswith('Sanitized historical source: restore local firmware reference') for a in node.exc.args):
+                    reference_disabled.add(path)
             if path.startswith(('tools/research/','tools/phase')):
                 for node in ast.walk(tree):
                     if isinstance(node,ast.Constant) and isinstance(node.value,str) and re.fullmatch('[0-9a-fA-F]{4,128}',node.value) and len(node.value)%2==0 and len(node.value) not in (40,64):
