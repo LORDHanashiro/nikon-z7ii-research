@@ -1,10 +1,13 @@
 """Finite publication checks with self-authored synthetic data, never Nikon input."""
 from pathlib import Path
 import csv
+import importlib.util
 import json
 import struct
 import sys
+from types import SimpleNamespace
 import unittest
+from unittest.mock import patch
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'tools/prototypes'))
@@ -12,6 +15,26 @@ from status_count_sink import ACCEPTED_BRANCH_CODE,HostAssumptions,Reply,Synthet
 from storage_span_plan import plan
 
 class PublicationTests(unittest.TestCase):
+    def test_remote_gate_requires_empty_branches_and_tags(self):
+        spec=importlib.util.spec_from_file_location('publication_manager',ROOT/'publication-tools/sync.py')
+        manager=importlib.util.module_from_spec(spec);spec.loader.exec_module(manager)
+        for code,branches,tags,accepted in [(409,[],[],True),(404,[],[],True),(409,[{'name':'other'}],[],False),(409,[],[{'name':'tag'}],False),(403,[],[],False)]:
+            with self.subTest(code=code,branches=branches,tags=tags):
+                responses=[SimpleNamespace(returncode=1,stdout='',stderr=f'gh: response (HTTP {code})')]
+                if code in (404,409):
+                    responses.extend(SimpleNamespace(returncode=0,stdout=json.dumps(v),stderr='') for v in (branches,tags))
+                with patch.object(manager,'call',side_effect=responses) as remote:
+                    if accepted:manager.verify_remote_base(Path('unused-fixture'),'fixture-gh','fixture-owner/fixture-repo')
+                    else:
+                        with self.assertRaises(RuntimeError):manager.verify_remote_base(Path('unused-fixture'),'fixture-gh','fixture-owner/fixture-repo')
+                    self.assertEqual(remote.call_count,3 if code in (404,409) else 1)
+        for ancestor in (True,False):
+            with self.subTest(existing_main_is_local_ancestor=ancestor):
+                with patch.object(manager,'call',return_value=SimpleNamespace(returncode=0,stdout='a'*40,stderr='')),patch.object(manager,'git',return_value=SimpleNamespace(returncode=0 if ancestor else 1)):
+                    if ancestor:manager.verify_remote_base(Path('unused-fixture'),'fixture-gh','fixture-owner/fixture-repo')
+                    else:
+                        with self.assertRaises(RuntimeError):manager.verify_remote_base(Path('unused-fixture'),'fixture-gh','fixture-owner/fixture-repo')
+
     def test_synthetic_codes_survive_short_writes(self):
         codes=list(range(1024));data=struct.pack('<1024H',*codes);output=bytearray()
         def callback(descriptor,wanted,view):

@@ -141,6 +141,18 @@ def commit(repo,message):
     if git(repo,'diff','--cached','--quiet',check=False).returncode:
         git(repo,*IDENT,'commit','-m',message)
 
+def verify_remote_base(repo,gh,full):
+    branch=call([gh,'api','repos/'+full+'/git/ref/heads/main','--jq','.object.sha'],check=False)
+    if branch.returncode==0:
+        old=branch.stdout.strip()
+        if git(repo,'merge-base','--is-ancestor',old,'main',check=False).returncode:raise RuntimeError('Existing remote history is not a local safe ancestor; no force push')
+    elif not any('(HTTP '+str(code)+')' in branch.stderr for code in (404,409)):
+        raise RuntimeError('Cannot verify remote main state')
+    else:
+        branches=json.loads(call([gh,'api','repos/'+full+'/branches']).stdout)
+        tags=json.loads(call([gh,'api','repos/'+full+'/tags']).stdout)
+        if branches or tags:raise RuntimeError('Existing repository has other refs but no verified main; refuse initial push')
+
 def push(repo,kind,owner,gh,approval,work):
     from audit_export import audit
     verify(repo)
@@ -158,14 +170,7 @@ def push(repo,kind,owner,gh,approval,work):
         r=call([gh,'api','repos/'+full])
     meta=json.loads(r.stdout)
     if meta['private']!=(kind=='private'):raise RuntimeError('Remote visibility mismatch; never change it or push automatically')
-    branch=call([gh,'api','repos/'+full+'/git/ref/heads/main','--jq','.object.sha'],check=False)
-    if branch.returncode==0:
-        old=branch.stdout.strip()
-        if git(repo,'merge-base','--is-ancestor',old,'main',check=False).returncode:raise RuntimeError('Existing remote history is not a local safe ancestor; no force push')
-    elif '404' not in branch.stderr:raise RuntimeError('Cannot verify remote main state')
-    else:
-        branches=json.loads(call([gh,'api','repos/'+full+'/branches']).stdout)
-        if branches:raise RuntimeError('Existing repository has other history but no verified main; refuse initial push')
+    verify_remote_base(repo,gh,full)
     url='https://github.com/'+full+'.git'
     remotes=git(repo,'remote').stdout.splitlines()
     if 'origin' in remotes:
@@ -178,8 +183,13 @@ def push(repo,kind,owner,gh,approval,work):
     git(repo,'-c','credential.helper=','-c','credential.helper='+helper,'push','--atomic','origin',*refs)
     remote=call([gh,'api','repos/'+full+'/git/ref/heads/main','--jq','.object.sha']).stdout.strip()
     assert remote==git(repo,'rev-parse','main').stdout.strip()
+    verified_refs={'main':remote}
+    if kind=='private':
+        history=call([gh,'api','repos/'+full+'/git/ref/heads/research-history','--jq','.object.sha']).stdout.strip()
+        assert history==git(repo,'rev-parse','research-history').stdout.strip()
+        verified_refs['research-history']=history
     meta=json.loads(call([gh,'api','repos/'+full]).stdout);assert meta['private']==(kind=='private')
-    dump(work/(kind+'-remote-receipt.json'),dict(url=meta['html_url'],private=meta['private'],main=remote,public_approval_manifest=approval if kind=='public' else None))
+    dump(work/(kind+'-remote-receipt.json'),dict(url=meta['html_url'],private=meta['private'],main=remote,verified_refs=verified_refs,default_branch=meta.get('default_branch'),public_approval_manifest=approval if kind=='public' else None))
     print(json.dumps(dict(url=meta['html_url'],private=meta['private'],main=remote)))
 
 def main():

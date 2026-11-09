@@ -35,8 +35,8 @@
     },
     {
       "path": "TESTING.md",
-      "bytes": 1453,
-      "sha256": "93069106f6bed7b1ca66d438c01b2d14a497bc332a1291f1bd5256330390568f"
+      "bytes": 2016,
+      "sha256": "056b9ff90d5b3ae328c318f3327283022f73afa0b4cbd5571ddc19de147a0765"
     },
     {
       "path": "THIRD_PARTY.md",
@@ -145,13 +145,13 @@
     },
     {
       "path": "publication-tools/sync.py",
-      "bytes": 18903,
-      "sha256": "babce12594755f82b19d57e80d98e12180570e19d3bd2f04c24d71e9974b1495"
+      "bytes": 19483,
+      "sha256": "ef7862ae9ee4a4f7d092a1eb375008a812107462cfb92a2c1ec87c1891482949"
     },
     {
       "path": "publication-tools/templates/TESTING.md",
-      "bytes": 1453,
-      "sha256": "93069106f6bed7b1ca66d438c01b2d14a497bc332a1291f1bd5256330390568f"
+      "bytes": 2016,
+      "sha256": "056b9ff90d5b3ae328c318f3327283022f73afa0b4cbd5571ddc19de147a0765"
     },
     {
       "path": "publication-tools/templates/ghidra/RestorePublicAnnotations.java",
@@ -160,8 +160,8 @@
     },
     {
       "path": "publication-tools/templates/tests/test_public_tools.py",
-      "bytes": 3448,
-      "sha256": "e8cb7020dbab0588870a55c36b84b3c1cf8edf24e7b724551edbcff74f933e7f"
+      "bytes": 5396,
+      "sha256": "8071bc851a6f7026655fc8014e647cb3d15fa0ba1d2234439bf57a7fa321dda3"
     },
     {
       "path": "publication-tools/templates/validation/initial-packaging.json",
@@ -170,8 +170,8 @@
     },
     {
       "path": "tests/test_public_tools.py",
-      "bytes": 3448,
-      "sha256": "e8cb7020dbab0588870a55c36b84b3c1cf8edf24e7b724551edbcff74f933e7f"
+      "bytes": 5396,
+      "sha256": "8071bc851a6f7026655fc8014e647cb3d15fa0ba1d2234439bf57a7fa321dda3"
     },
     {
       "path": "tools/prototypes/check_u10_recorder.py",

@@ -9,4 +9,6 @@ Initial packaging validation used Python 3.12.3, NumPy 1.26.4, GCC 13.3.0 and Gh
 
 These checks validate selected software and publication properties. They do not establish actual camera pixels, valid N-Log precision, encoder support, DMA or card throughput, complete boot or internal recording. No test was skipped or removed to obtain a pass.
 
+The current suite adds one publication-only gate test (seven tests total). Its local fake API responses cover an empty repository returning HTTP 409/404, rejection of other branches or tags, rejection of permission errors, and existing-main ancestry. These fake responses are not server observations. An actual newly created private GitHub repository independently returned HTTP 409 with empty branch/tag lists; the first attempted push stopped safely before data transfer and motivated the fix. Post-push checks verify both private branch heads and visibility.
+
 Run `python3 -m unittest discover -s tests -v` for the small checks. The independent recorder reader additionally needs NumPy and a C++20 compiler. No firmware, camera, private capture or vendor binary is a test fixture in this repository.
