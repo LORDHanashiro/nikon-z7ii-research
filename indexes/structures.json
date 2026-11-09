@@ -1,0 +1,3075 @@
+[
+  {
+    "component": "MAS",
+    "name": "AN_RecordPair",
+    "length": 8,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "word1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_RecordTriple",
+    "length": 12,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "word1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "word2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_InputTableHeader",
+    "length": 4,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "item_count",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_InputTableEntry12",
+    "length": 12,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "unconsumed_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "submitted_A",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "submitted_B",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_C_ConfigPartial",
+    "length": 416,
+    "grade": "INFERRED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "mode_byte_unknown",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 2,
+        "size": 2,
+        "type": "u16",
+        "name": "width_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 2,
+        "type": "u16",
+        "name": "height_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 6,
+        "size": 2,
+        "type": "u16",
+        "name": "rate_code_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 96,
+        "size": 1,
+        "type": "u8",
+        "name": "profile_idc_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 97,
+        "size": 1,
+        "type": "u8",
+        "name": "level_idc_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 100,
+        "size": 4,
+        "type": "u32",
+        "name": "conditional_flag_unknown",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 104,
+        "size": 2,
+        "type": "u16",
+        "name": "zero_half_68",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 106,
+        "size": 2,
+        "type": "u16",
+        "name": "zero_half_6a",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 108,
+        "size": 2,
+        "type": "u16",
+        "name": "zero_half_6c",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 110,
+        "size": 2,
+        "type": "u16",
+        "name": "conditional_half_6e",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 408,
+        "size": 2,
+        "type": "u16",
+        "name": "zero_half_198",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 412,
+        "size": 4,
+        "type": "u32",
+        "name": "zero_word_19c",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_H_Partial",
+    "length": 68,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "ptr:AN_C_ConfigPartial",
+        "name": "C_ptr",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "ptr",
+        "name": "notify_callback",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "ptr",
+        "name": "third_context_ptr",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "ptr:AN_InputTableHeader",
+        "name": "input_table0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "ptr:AN_InputTableHeader",
+        "name": "input_table1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "ptr:AN_InputTableHeader",
+        "name": "input_table2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 4,
+        "type": "ptr:AN_InputTableHeader",
+        "name": "input_table3",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 28,
+        "size": 8,
+        "type": "struct:AN_RecordPair",
+        "name": "record_pair0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 36,
+        "size": 8,
+        "type": "struct:AN_RecordPair",
+        "name": "record_pair1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 44,
+        "size": 12,
+        "type": "struct:AN_RecordTriple",
+        "name": "record_triple0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 56,
+        "size": 12,
+        "type": "struct:AN_RecordTriple",
+        "name": "record_triple1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_NotificationCode23Partial",
+    "length": 8,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "code_2_or_3",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "ptr",
+        "name": "input_slot_address",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_TypedHNode",
+    "length": 8,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "dispatch_tag",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "ptr:AN_H_Partial",
+        "name": "H_ptr",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_IndexedRegistryPartial",
+    "length": 128,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 4,
+        "size": 1,
+        "type": "u8",
+        "name": "selected_bank_1_or_2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 8,
+        "type": "struct:AN_TypedHNode",
+        "name": "entry0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 8,
+        "type": "struct:AN_TypedHNode",
+        "name": "entry1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 124,
+        "size": 4,
+        "type": "u32",
+        "name": "zero_on_registration",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_AppSampleRecordPartial",
+    "length": 20,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 2,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar_u16_2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "value_or_address_A",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar_u16_8",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "value_or_address_B",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar_u16_10",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 0,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar_from_message_0a",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 18,
+        "size": 2,
+        "type": "u16",
+        "name": "opaque_tail",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_InputTablePartial",
+    "length": 82,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "count",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 12,
+        "type": "struct:AN_InputTableEntry12",
+        "name": "first_record",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 76,
+        "size": 4,
+        "type": "u32",
+        "name": "scalar_argument1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 80,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar_argument2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_SampleRingPartial",
+    "length": 608,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 20,
+        "type": "struct:AN_AppSampleRecordPartial",
+        "name": "record0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 600,
+        "size": 4,
+        "type": "u32",
+        "name": "enqueue_index",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 604,
+        "size": 4,
+        "type": "u32",
+        "name": "dequeue_index",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_Message32Partial",
+    "length": 32,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 2,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar4",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 10,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar0a",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar0c",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 14,
+        "size": 2,
+        "type": "u16",
+        "name": "shared_delta",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "u32",
+        "name": "baseA_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 4,
+        "type": "u32",
+        "name": "baseB_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_SourcePointerObjectPartial",
+    "length": 32,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "index_upper_bound",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "ptr",
+        "name": "selector_state_base",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "ptr",
+        "name": "entry_table_base",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "configured_transfer_bytes",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 28,
+        "size": 4,
+        "type": "u32",
+        "name": "last_reserved_index",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "selector_state_count",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "ptr",
+        "name": "content_body_base",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 4,
+        "type": "u32",
+        "name": "content_body_stride",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_ContentPointerEntry8",
+    "length": 8,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "nonzero_unavailable_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "ptr",
+        "name": "content_pointer",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_InputRecord28Partial",
+    "length": 28,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 2,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar4",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 10,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar0a",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 2,
+        "type": "u16",
+        "name": "scalar0c",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 14,
+        "size": 2,
+        "type": "u16",
+        "name": "shared_delta",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "u32",
+        "name": "baseA_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 4,
+        "type": "u32",
+        "name": "baseB_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_RecordBatchPartial",
+    "length": 12,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "ptr:AN_InputRecord28Partial",
+        "name": "records_ptr",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "count",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "repeat_extra",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_U_SourceDescriptorPartial",
+    "length": 52,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "ptr",
+        "name": "aux_record",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "slot_index",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "aux_first_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "u32",
+        "name": "replacement_flag",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 44,
+        "size": 4,
+        "type": "u32",
+        "name": "candidate_base_A",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 48,
+        "size": 4,
+        "type": "u32",
+        "name": "candidate_base_B",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 1,
+        "type": "u8",
+        "name": "layout_primary",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 25,
+        "size": 1,
+        "type": "u8",
+        "name": "layout_secondary",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 26,
+        "size": 2,
+        "type": "u16",
+        "name": "row_scalar_a",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 28,
+        "size": 2,
+        "type": "u16",
+        "name": "row_scalar_b",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 30,
+        "size": 2,
+        "type": "u16",
+        "name": "case_dimension_a",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 32,
+        "size": 2,
+        "type": "u16",
+        "name": "case_dimension_b",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 34,
+        "size": 2,
+        "type": "u16",
+        "name": "table_dimension_a",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 36,
+        "size": 2,
+        "type": "u16",
+        "name": "table_dimension_b",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 38,
+        "size": 2,
+        "type": "u16",
+        "name": "common_delta",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 40,
+        "size": 2,
+        "type": "u16",
+        "name": "offset_b",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_SourceHandleConfigWords",
+    "length": 16,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "provider_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "aggregate_parameter",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "per_item_parameter",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "item_count",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_RegionTokenRecord",
+    "length": 20,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "encoded_token",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "start_coordinate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "coordinate_span",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "slot_coordinate_stride",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "u32",
+        "name": "slot_wrap_count",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_RegionRowPartial",
+    "length": 56,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "ptr",
+        "name": "root_record",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "ptr",
+        "name": "record_slot_0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "ptr",
+        "name": "record_slot_1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "ptr",
+        "name": "record_slot_2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "ptr",
+        "name": "record_slot_3",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "ptr",
+        "name": "record_slot_4",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 4,
+        "type": "ptr",
+        "name": "record_slot_5",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 28,
+        "size": 4,
+        "type": "ptr",
+        "name": "record_slot_6",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 32,
+        "size": 4,
+        "type": "ptr",
+        "name": "record_slot_7",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 36,
+        "size": 4,
+        "type": "ptr",
+        "name": "record_slot_8",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 40,
+        "size": 4,
+        "type": "ptr",
+        "name": "record_slot_9",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 44,
+        "size": 4,
+        "type": "u32",
+        "name": "record_count",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 48,
+        "size": 4,
+        "type": "u32",
+        "name": "cursor_coordinate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 52,
+        "size": 4,
+        "type": "u32",
+        "name": "remaining_coordinate_span",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_RegionSlotQuery8",
+    "length": 8,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "slot_coordinate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "slot_coordinate_stride",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_CompactNameParameterPartial",
+    "length": 96,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "u32",
+        "name": "label_suffix_zero",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 1,
+        "type": "u8",
+        "name": "source_header_byte2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 25,
+        "size": 1,
+        "type": "u8",
+        "name": "byte19_zero",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 80,
+        "size": 2,
+        "type": "u16",
+        "name": "provider_id",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 84,
+        "size": 4,
+        "type": "ptr",
+        "name": "selected_source_record",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 88,
+        "size": 4,
+        "type": "u32",
+        "name": "word58_zero",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 92,
+        "size": 4,
+        "type": "u32",
+        "name": "word5c_zero",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_SettingsCacheViewPartial",
+    "length": 64,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 54,
+        "size": 1,
+        "type": "u8",
+        "name": "predicate_byte",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 56,
+        "size": 4,
+        "type": "u32",
+        "name": "predicate_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 61,
+        "size": 1,
+        "type": "u8",
+        "name": "key16A5_cache",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 62,
+        "size": 1,
+        "type": "u8",
+        "name": "key1688_cache",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 63,
+        "size": 1,
+        "type": "u8",
+        "name": "key16BF_cache",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_NotificationObjectPartial",
+    "length": 60,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 56,
+        "size": 4,
+        "type": "u32",
+        "name": "indexed_word_base",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_DpInvocationEnvelopePartial",
+    "length": 117,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "negative_result_policy",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "stop_state",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "ptr",
+        "name": "T_pointer",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 116,
+        "size": 1,
+        "type": "u8",
+        "name": "entry_gate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_MaskSourceConfigPartial",
+    "length": 148,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 28,
+        "size": 4,
+        "type": "u32",
+        "name": "conditional_control_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 44,
+        "size": 4,
+        "type": "u32",
+        "name": "dimension6_packed",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 48,
+        "size": 4,
+        "type": "u32",
+        "name": "dimension8_packed",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 88,
+        "size": 4,
+        "type": "u32",
+        "name": "parameter58",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 96,
+        "size": 4,
+        "type": "u32",
+        "name": "parameter60",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 144,
+        "size": 4,
+        "type": "u32",
+        "name": "wait_mask_source",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_SelectedProcessingConfigKPartial",
+    "length": 2004,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 1928,
+        "size": 4,
+        "type": "ptr",
+        "name": "envelope_relative_pointer",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 1968,
+        "size": 4,
+        "type": "u32",
+        "name": "P_conditional_value",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 1996,
+        "size": 4,
+        "type": "u32",
+        "name": "mode_predicate_7CC",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 2000,
+        "size": 4,
+        "type": "u32",
+        "name": "mode_predicate_7D0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_Code4NotificationPartial",
+    "length": 8,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "code",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "ptr",
+        "name": "record_pointer",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_Code4RingHeaderPartial",
+    "length": 8,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "write_index",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "other_index",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_Code4ConvertedRecordPartial",
+    "length": 16,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "count_header",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 1,
+        "type": "u8",
+        "name": "opaque_flag5",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "opaque_value27",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "opaque_word32",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_Code4Raw8Partial",
+    "length": 8,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "opaque_W0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "opaque_W1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_ResultCursorRangePartial",
+    "length": 12,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "limit",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "cursor",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "base_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_HRawDescriptorRangesPartial",
+    "length": 68,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 44,
+        "size": 12,
+        "type": "struct:AN_ResultCursorRangePartial",
+        "name": "raw_range0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 56,
+        "size": 12,
+        "type": "struct:AN_ResultCursorRangePartial",
+        "name": "raw_range1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_ResultBatchOutputPartial",
+    "length": 1008,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "valid_header",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "total_plus_114",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "group0_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "group0_word1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "u32",
+        "name": "group0_word2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "u32",
+        "name": "group0_word3",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 968,
+        "size": 4,
+        "type": "u32",
+        "name": "group_count",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 972,
+        "size": 4,
+        "type": "u32",
+        "name": "four_entry_pattern_seen",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 976,
+        "size": 4,
+        "type": "u32",
+        "name": "tag7_tuple_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 992,
+        "size": 4,
+        "type": "u32",
+        "name": "tag8_tuple_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_TwoRangeSummaryPartial",
+    "length": 16,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "base0_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "span0_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "base1_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "span1_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_BatchCallbackGlobalPartial",
+    "length": 16,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "callback_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "companion_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_ExLinkInputConfigPartial",
+    "length": 16,
+    "grade": "INFERRED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "byte0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 1,
+        "size": 1,
+        "type": "u8",
+        "name": "byte1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 2,
+        "size": 1,
+        "type": "u8",
+        "name": "byte2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 3,
+        "size": 1,
+        "type": "u8",
+        "name": "byte3",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 1,
+        "type": "u8",
+        "name": "byte4",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "word8_candidate_rate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 1,
+        "type": "u8",
+        "name": "byteC",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_EncoderNonProfileSlice",
+    "length": 160,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 112,
+        "size": 4,
+        "type": "u32",
+        "name": "word70_unknown",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 116,
+        "size": 4,
+        "type": "u32",
+        "name": "word74_unknown",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 120,
+        "size": 1,
+        "type": "u8",
+        "name": "byte78_unknown",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 121,
+        "size": 1,
+        "type": "u8",
+        "name": "byte79_unknown",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 15,
+        "size": 1,
+        "type": "u8",
+        "name": "byteF_video_format_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "u32",
+        "name": "word10_range_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 1,
+        "type": "u8",
+        "name": "byte14_colour_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 21,
+        "size": 1,
+        "type": "u8",
+        "name": "byte15_transfer_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 22,
+        "size": 1,
+        "type": "u8",
+        "name": "byte16_matrix_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_ReadoutK_Partial",
+    "length": 196,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 20,
+        "size": 2,
+        "type": "u16",
+        "name": "coord14_unknown",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 32,
+        "size": 4,
+        "type": "u32",
+        "name": "opaque20",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 36,
+        "size": 4,
+        "type": "u32",
+        "name": "aligned24",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 40,
+        "size": 4,
+        "type": "u32",
+        "name": "product28",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 44,
+        "size": 4,
+        "type": "u32",
+        "name": "opaque2C",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 48,
+        "size": 4,
+        "type": "u32",
+        "name": "aligned30",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 52,
+        "size": 1,
+        "type": "u8",
+        "name": "enum34",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 53,
+        "size": 1,
+        "type": "u8",
+        "name": "enum35",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 192,
+        "size": 1,
+        "type": "u8",
+        "name": "factorC0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_ReadoutRtbl_Partial",
+    "length": 32,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "interface_result4",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "interface_result8",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_CaptureDescriptorGeometry_Partial",
+    "length": 44,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 36,
+        "size": 1,
+        "type": "u8",
+        "name": "mode_source_unknown",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 38,
+        "size": 2,
+        "type": "u16",
+        "name": "existing_step_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 40,
+        "size": 2,
+        "type": "u16",
+        "name": "width_coordinate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 42,
+        "size": 2,
+        "type": "u16",
+        "name": "height_coordinate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_CaptureSubmit44_Partial",
+    "length": 68,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "selector",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 26,
+        "size": 2,
+        "type": "u16",
+        "name": "row_step_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 36,
+        "size": 4,
+        "type": "u32",
+        "name": "bank0_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 52,
+        "size": 4,
+        "type": "u32",
+        "name": "bank1_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_CaptureParam1C_Partial",
+    "length": 28,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "control_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 1,
+        "type": "u8",
+        "name": "control_byte4",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 5,
+        "size": 1,
+        "type": "u8",
+        "name": "mode_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 6,
+        "size": 2,
+        "type": "u16",
+        "name": "width_coordinate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 10,
+        "size": 2,
+        "type": "u16",
+        "name": "height_coordinate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 14,
+        "size": 1,
+        "type": "u8",
+        "name": "control_byteE",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "u32",
+        "name": "control_word10",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 1,
+        "type": "u8",
+        "name": "control_byte14",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 22,
+        "size": 2,
+        "type": "u16",
+        "name": "control_half16",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 4,
+        "type": "u32",
+        "name": "control_word18",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_ROM_ControlRecord8_Partial",
+    "length": 8,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "control_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 2,
+        "type": "u16",
+        "name": "control_half4_bits",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 6,
+        "size": 2,
+        "type": "u16",
+        "name": "control_half6_bits",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_RawBankControl44_Partial",
+    "length": 68,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "selector",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 26,
+        "size": 2,
+        "type": "u16",
+        "name": "row_step_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 36,
+        "size": 4,
+        "type": "u32",
+        "name": "bank0_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 40,
+        "size": 4,
+        "type": "u32",
+        "name": "bank0_word1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 44,
+        "size": 4,
+        "type": "u32",
+        "name": "bank0_word2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 48,
+        "size": 4,
+        "type": "u32",
+        "name": "bank0_word3",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 52,
+        "size": 4,
+        "type": "u32",
+        "name": "bank1_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_SoftwareRangeMap24_Partial",
+    "length": 24,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "record_id",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "span_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "destination_base_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "source_base_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "u32",
+        "name": "table_entry_count",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "u32",
+        "name": "first_table_index",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_MappingPacketA0_Partial",
+    "length": 160,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "source_base_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 32,
+        "size": 4,
+        "type": "u32",
+        "name": "inverse_span_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 64,
+        "size": 4,
+        "type": "u32",
+        "name": "destination_base_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 96,
+        "size": 4,
+        "type": "u32",
+        "name": "control_group3_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 128,
+        "size": 4,
+        "type": "u32",
+        "name": "control_group4_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_SourceRequestD0_Partial",
+    "length": 208,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "tag",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 28,
+        "size": 4,
+        "type": "u32",
+        "name": "opaque_handle",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 40,
+        "size": 4,
+        "type": "u32",
+        "name": "descriptor_tag",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 44,
+        "size": 4,
+        "type": "u32",
+        "name": "source_address_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 48,
+        "size": 4,
+        "type": "u32",
+        "name": "descriptor_zero",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 52,
+        "size": 4,
+        "type": "u32",
+        "name": "length_like",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 56,
+        "size": 4,
+        "type": "u32",
+        "name": "out_pointer_like",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 188,
+        "size": 1,
+        "type": "u8",
+        "name": "operation",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_LocalOutputSurface68_Partial",
+    "length": 104,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 24,
+        "size": 1,
+        "type": "u8",
+        "name": "format_like",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 26,
+        "size": 2,
+        "type": "u16",
+        "name": "row_like",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 34,
+        "size": 2,
+        "type": "u16",
+        "name": "coord22",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 36,
+        "size": 2,
+        "type": "u16",
+        "name": "coord24",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 38,
+        "size": 2,
+        "type": "u16",
+        "name": "coord26",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 40,
+        "size": 2,
+        "type": "u16",
+        "name": "coord28",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 44,
+        "size": 4,
+        "type": "u32",
+        "name": "address_word_a",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 48,
+        "size": 4,
+        "type": "u32",
+        "name": "address_word_b",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_BlockMedia20_Partial",
+    "length": 32,
+    "grade": "INFERRED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "media_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "block_size_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 4,
+        "type": "u32",
+        "name": "last_block_lo_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 28,
+        "size": 4,
+        "type": "u32",
+        "name": "last_block_hi_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_PrivateNvmeRequest28_Partial",
+    "length": 40,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "buffer_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "transfer_length_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "u32",
+        "name": "metadata_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "u32",
+        "name": "metadata_length_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 1,
+        "type": "u8",
+        "name": "queue_selector",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 28,
+        "size": 4,
+        "type": "u32",
+        "name": "command_pointer",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 32,
+        "size": 4,
+        "type": "u32",
+        "name": "completion_pointer",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_PairedInputPrefix133_Partial",
+    "length": 12,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "control0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 1,
+        "size": 1,
+        "type": "u8",
+        "name": "mapped_input_code",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 2,
+        "size": 2,
+        "type": "u16",
+        "name": "opaque_halfword2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 2,
+        "type": "u16",
+        "name": "opaque_halfword4",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 6,
+        "size": 2,
+        "type": "u16",
+        "name": "opaque_halfword6",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 2,
+        "type": "u16",
+        "name": "opaque_halfword8",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_ReadoutStatusView138_Partial",
+    "length": 24,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "observed_flag_byte",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "u32",
+        "name": "observed_mask_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_OpaqueProcessing516_Partial",
+    "length": 516,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "opaque_first_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 512,
+        "size": 4,
+        "type": "u32",
+        "name": "opaque_last_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_Format3Global68_Partial",
+    "length": 68,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "zero_byte",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "zero_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "u32",
+        "name": "source_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "u32",
+        "name": "source_companion_zero",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 4,
+        "type": "u32",
+        "name": "signed_aligned_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 28,
+        "size": 4,
+        "type": "u32",
+        "name": "aligned_duplicate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 32,
+        "size": 1,
+        "type": "u8",
+        "name": "mapped_mode",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 36,
+        "size": 4,
+        "type": "u32",
+        "name": "output_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 40,
+        "size": 4,
+        "type": "u32",
+        "name": "output_word1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 44,
+        "size": 1,
+        "type": "u8",
+        "name": "observed_status_byte",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_Format3Stack28_Partial",
+    "length": 28,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "pointer_form_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "u32",
+        "name": "tag_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "u32",
+        "name": "descriptor_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 4,
+        "type": "u32",
+        "name": "zero_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_AddressExtentRecord12_Partial",
+    "length": 12,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "descriptor14_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "extent_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "context_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_ImageCacheSvcArgs16_Partial",
+    "length": 16,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "entry_r0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "entry_r1",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "entry_r2",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "entry_r3",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_AVC_ParameterPrefix7A_Partial",
+    "length": 122,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 100,
+        "size": 4,
+        "type": "u32",
+        "name": "field64",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 104,
+        "size": 2,
+        "type": "u16",
+        "name": "field68",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 106,
+        "size": 2,
+        "type": "u16",
+        "name": "field6a",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 108,
+        "size": 2,
+        "type": "u16",
+        "name": "field6c",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 110,
+        "size": 2,
+        "type": "u16",
+        "name": "field6e",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 112,
+        "size": 4,
+        "type": "u32",
+        "name": "field70",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 116,
+        "size": 4,
+        "type": "u32",
+        "name": "field74",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 120,
+        "size": 1,
+        "type": "u8",
+        "name": "field78",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 121,
+        "size": 1,
+        "type": "u8",
+        "name": "field79",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_AVC_RawPrefix2B_Partial",
+    "length": 43,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "field00",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 2,
+        "size": 2,
+        "type": "u16",
+        "name": "field02",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 2,
+        "type": "u16",
+        "name": "field04",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 6,
+        "size": 2,
+        "type": "u16",
+        "name": "field06",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 1,
+        "type": "u8",
+        "name": "field08",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 10,
+        "size": 2,
+        "type": "u16",
+        "name": "field0a",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 40,
+        "size": 2,
+        "type": "u16",
+        "name": "field28",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 42,
+        "size": 1,
+        "type": "u8",
+        "name": "field2a",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_CallbackObject69_Partial",
+    "length": 105,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 4,
+        "size": 2,
+        "type": "u16",
+        "name": "field04",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "callback_arg0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "u32",
+        "name": "position_lo",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 20,
+        "size": 4,
+        "type": "u32",
+        "name": "position_hi",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 24,
+        "size": 4,
+        "type": "u32",
+        "name": "extent_lo",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 28,
+        "size": 4,
+        "type": "u32",
+        "name": "extent_hi",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 32,
+        "size": 4,
+        "type": "u32",
+        "name": "threshold_snapshot_lo",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 36,
+        "size": 4,
+        "type": "u32",
+        "name": "threshold_snapshot_hi",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 104,
+        "size": 1,
+        "type": "u8",
+        "name": "state68",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_RefillObject14_Partial",
+    "length": 20,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "count_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "descriptor0_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "descriptor1_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "descriptor2_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 16,
+        "size": 4,
+        "type": "u32",
+        "name": "descriptor3_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "MAS",
+    "name": "AN_RefillAction75_Partial",
+    "length": 117,
+    "grade": "VERIFIED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "arg_word0",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "gate_word4",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "context_wordC",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 100,
+        "size": 4,
+        "type": "u32",
+        "name": "condition_word64",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 116,
+        "size": 1,
+        "type": "u8",
+        "name": "gate_byte74",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "SLA",
+    "name": "AN_SLA_H264EventRingPartial",
+    "length": 136,
+    "grade": "INFERRED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 128,
+        "type": "u32_array",
+        "name": "queued_words",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 128,
+        "size": 4,
+        "type": "u32",
+        "name": "writer_index",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 132,
+        "size": 4,
+        "type": "u32",
+        "name": "reader_index",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "SLA",
+    "name": "AN_SLA_EventContextPartial",
+    "length": 8,
+    "grade": "INFERRED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "opaque_handle",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "callback_pointer",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "SLA",
+    "name": "AN_SLA_RangeRecord24Partial",
+    "length": 24,
+    "grade": "INFERRED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 1,
+        "type": "u8",
+        "name": "record_id",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "span_candidate",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "destination_base_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "source_base_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "SLA",
+    "name": "AN_SLA_RangeRegistry28Partial",
+    "length": 40,
+    "grade": "INFERRED",
+    "fields": [
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "nonzero_gate_handle",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 32,
+        "size": 4,
+        "type": "u32",
+        "name": "record_table",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 36,
+        "size": 4,
+        "type": "u32",
+        "name": "record_count",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "EX",
+    "name": "AN_EX_VectorPrefixPartial",
+    "length": 64,
+    "grade": "INFERRED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "initial_stack_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "reset_pointer_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  },
+  {
+    "component": "EX",
+    "name": "AN_EX_ScatterRecordPartial",
+    "length": 16,
+    "grade": "INFERRED",
+    "fields": [
+      {
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "name": "source_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 4,
+        "size": 4,
+        "type": "u32",
+        "name": "destination_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 8,
+        "size": 4,
+        "type": "u32",
+        "name": "length_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      },
+      {
+        "offset": 12,
+        "size": 4,
+        "type": "u32",
+        "name": "handler_word",
+        "comment": "Partial analysis field; semantic interpretation and runtime object identity are not forced."
+      }
+    ]
+  }
+]

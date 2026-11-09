@@ -1,0 +1,8 @@
+flowchart LR
+  P[Configuration field +0x46C] -->|VERIFIED local static| DP[Dp own constructor]
+  DP -.->|"active instance/generation INFERRED"| SUBMIT[Software format submission]
+  PROVIDER[Actual producer UNKNOWN] -.-> DESC[Descriptor address field +0x34]
+  DESC -->|VERIFIED static| VECTOR[Address vector]
+  VECTOR -->|VERIFIED static dispatch| PORTS[q-selected software address writes]
+  PORTS -.->|"pixels / precision / completion UNKNOWN"| FRAME[Accessible genuine N-Log frame NOT FOUND]
+  FRAME -.->|"integration UNKNOWN"| REC[Candidate recording interface]

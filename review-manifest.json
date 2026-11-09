@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "repository_kind": "public",
+  "scope": "Screened publication payload; control files listed separately to avoid self-hash recursion",
+  "members": [
+    {
+      "path": ".gitignore",
+      "bytes": 104,
+      "sha256": "338a78085617c3e484d84071514ed40522dc1e2da2143aab1cd4ba9a9b4d4e64"
+    },
+    {
+      "path": "AUDIT.md",
+      "bytes": 1206,
+      "sha256": "a624e6f1dbfabf7f52609bf5af4ea2d4565ba5273b4f2d9bba5d7e6e3a2b9e93"
+    },
+    {
+      "path": "COPYRIGHT.md",
+      "bytes": 519,
+      "sha256": "55faf7caba2f15d14608ef021cd49eddf5a917d9ec7645d9cce22412f9ec8e06"
+    },
+    {
+      "path": "PUBLIC-FILES.txt",
+      "bytes": 1204,
+      "sha256": "38ea1ffed69ea764ff1453920e169bb90c8e5ef75cb76aba42a430b825493590"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2662,
+      "sha256": "b73379c2bc159bc601ddc5a7d2ff91e094d76b0a187689c847382b7dfc036674"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "bytes": 1903,
+      "sha256": "669155e8f595fee354e1589532004afcc500bc37bd61bbbe743d38bcacccce73"
+    },
+    {
+      "path": "TESTING.md",
+      "bytes": 1453,
+      "sha256": "93069106f6bed7b1ca66d438c01b2d14a497bc332a1291f1bd5256330390568f"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "bytes": 1586,
+      "sha256": "8b296773496e2ca8f469275e776b3134cfdba4057df91295efe272e675c1fcd9"
+    },
+    {
+      "path": "diagrams/hardware.mmd",
+      "bytes": 492,
+      "sha256": "a99f57b09814e48581149f66b0cb00d68d3e613434cfb245f1f38e2296032f39"
+    },
+    {
+      "path": "diagrams/software.mmd",
+      "bytes": 564,
+      "sha256": "af0c475f24ce43df43b90ce79e67716e5ccab88b3549dae111aacf00c10d7a7e"
+    },
+    {
+      "path": "docs/architecture.md",
+      "bytes": 1502,
+      "sha256": "0077046c88024fc7578eb633cbcba1a728ce5dddc993c7ed61b57c2802d5ddfa"
+    },
+    {
+      "path": "docs/corrections.md",
+      "bytes": 1124,
+      "sha256": "6acc817421c79c9b94ccdde707a7a37cae98dc170af420ffa78535f6f942bd48"
+    },
+    {
+      "path": "docs/encoder.md",
+      "bytes": 902,
+      "sha256": "5b7d1a1d38619f6125c222384af6e44ac640a7f671722327cf3accd9cf8b2a8f"
+    },
+    {
+      "path": "docs/evidence.md",
+      "bytes": 1195,
+      "sha256": "791705fda45d6c297cec969b67ff4141dcb7874f2c47d4bcaf7c8560501c8b8c"
+    },
+    {
+      "path": "docs/findings.md",
+      "bytes": 1879,
+      "sha256": "dbdddfb92488be709481fbe21e41f296b87db86482bce00dabcd76efe8962b91"
+    },
+    {
+      "path": "docs/hdmi-nlog.md",
+      "bytes": 1047,
+      "sha256": "6013d5753b65ef6a6590a6d191a61650dbc3f147a7cd477129e2b0fe2f3523cf"
+    },
+    {
+      "path": "docs/raw.md",
+      "bytes": 900,
+      "sha256": "3626cd62d5ebf6b9cde2b321c445bf63a0772f39325d6aa23b9a4952d42cd65f"
+    },
+    {
+      "path": "docs/synchronization.md",
+      "bytes": 2717,
+      "sha256": "b1a76cab3b3ae38d46f2c3c3608e74ba4ab17a2e419229402d8f60fb4c8e606b"
+    },
+    {
+      "path": "ghidra/README.md",
+      "bytes": 904,
+      "sha256": "f6e5760928e249004c154ce74141438c665321a3b86ecaf274265e80548b3f56"
+    },
+    {
+      "path": "ghidra/RestorePublicAnnotations.java",
+      "bytes": 5075,
+      "sha256": "a6318f6201e26b8c83659afd609e0ad2cb5c4a24c9a4aec7ab308ae1723a2406"
+    },
+    {
+      "path": "indexes/annotation-recipe.json",
+      "bytes": 248400,
+      "sha256": "04505ae82d179281966a64bb5368fa55cd5fcd2d4a5092f103aca51a8a0cc3c4"
+    },
+    {
+      "path": "indexes/functions.csv",
+      "bytes": 68395,
+      "sha256": "e1a015d5f3bb6ab38e22fd362b111917cc91d7f60b00ff6bef7a8f2fc4809d95"
+    },
+    {
+      "path": "indexes/nodes.csv",
+      "bytes": 32467,
+      "sha256": "48c6d3e30af3a038111d93ee09d4eb8cf521ee8228b7626f2446b2572229f95b"
+    },
+    {
+      "path": "indexes/relations.csv",
+      "bytes": 236847,
+      "sha256": "21a5e167f7b41cd9707001a83a0babafd09975bd9649ab3ebd741afa2e49c4ff"
+    },
+    {
+      "path": "indexes/structures.json",
+      "bytes": 91495,
+      "sha256": "9f3dfae0fc7108d6030f9e4e9a6cc2f3591811c2d093d7b98a98ba5d22be9bb5"
+    },
+    {
+      "path": "publication-tools/audit_export.py",
+      "bytes": 5784,
+      "sha256": "2861e9a363ecaca1dbebf07f214644a138a80a1ee923a57328109a9a0daee2d1"
+    },
+    {
+      "path": "publication-tools/build_public.py",
+      "bytes": 29224,
+      "sha256": "a423ba0b615b1a78d8ca20235cdb678d80fdd44abcd2a8d391271dbe88eb3c6d"
+    },
+    {
+      "path": "publication-tools/safe_export.py",
+      "bytes": 14038,
+      "sha256": "a720593d1d4fd2a4ed4e8e956390cd9251f584104a7a221ee2c8e554c45cab55"
+    },
+    {
+      "path": "publication-tools/sync.py",
+      "bytes": 18811,
+      "sha256": "df8c129c987e14886a43d403c7d1d80b3dbe164a093cf54d7153ff3446bb7dd9"
+    },
+    {
+      "path": "publication-tools/templates/TESTING.md",
+      "bytes": 1453,
+      "sha256": "93069106f6bed7b1ca66d438c01b2d14a497bc332a1291f1bd5256330390568f"
+    },
+    {
+      "path": "publication-tools/templates/ghidra/RestorePublicAnnotations.java",
+      "bytes": 5075,
+      "sha256": "a6318f6201e26b8c83659afd609e0ad2cb5c4a24c9a4aec7ab308ae1723a2406"
+    },
+    {
+      "path": "publication-tools/templates/tests/test_public_tools.py",
+      "bytes": 3448,
+      "sha256": "e8cb7020dbab0588870a55c36b84b3c1cf8edf24e7b724551edbcff74f933e7f"
+    },
+    {
+      "path": "publication-tools/templates/validation/initial-packaging.json",
+      "bytes": 1181,
+      "sha256": "cf455fd7a2be0462461cacc64bad32fa0731fba8a54b5d8926316a38f83292d0"
+    },
+    {
+      "path": "tests/test_public_tools.py",
+      "bytes": 3448,
+      "sha256": "e8cb7020dbab0588870a55c36b84b3c1cf8edf24e7b724551edbcff74f933e7f"
+    },
+    {
+      "path": "tools/prototypes/check_u10_recorder.py",
+      "bytes": 6313,
+      "sha256": "03281eabf230f7623434ff4e70dad616d59e034e3b90641d4ebad4a17f98c1a2"
+    },
+    {
+      "path": "tools/prototypes/export_u10_planar.py",
+      "bytes": 2447,
+      "sha256": "468e46c0d81d44a7ead2f741c092c0d39d7b73882d6c6b2e2a4412161fe36260"
+    },
+    {
+      "path": "tools/prototypes/lossless_blocks.py",
+      "bytes": 6028,
+      "sha256": "45adc6671c4a5a7df6540f95a10650d28c15074778663a553f9e1a15afc17e1b"
+    },
+    {
+      "path": "tools/prototypes/recording_envelope.py",
+      "bytes": 4858,
+      "sha256": "aafc0a109f6f3637a74598897f87b77187a379160e6c42cb8375f0bc4864be61"
+    },
+    {
+      "path": "tools/prototypes/recover_u10_prefix.py",
+      "bytes": 6258,
+      "sha256": "69612607200cfb733806b75f0480b888f33744a7c8df07b091d0a66414f108fc"
+    },
+    {
+      "path": "tools/prototypes/status_count_sink.py",
+      "bytes": 4144,
+      "sha256": "a041ca5d236b02b9de0388aee48b4d3dc6b8e57abcb33199e04861143345fdf7"
+    },
+    {
+      "path": "tools/prototypes/storage_span_plan.py",
+      "bytes": 7014,
+      "sha256": "9c1e6ab0bf592165a0ff5379aba3db1eb2f163ab481eb47e5fe5771d788321c6"
+    },
+    {
+      "path": "tools/prototypes/u10_recorder.cpp",
+      "bytes": 10721,
+      "sha256": "c85b0062942c2a945720b48c27dd6301cea853f60e1f1edaeec5fe1d4f7726c0"
+    },
+    {
+      "path": "validation/initial-packaging.json",
+      "bytes": 1181,
+      "sha256": "cf455fd7a2be0462461cacc64bad32fa0731fba8a54b5d8926316a38f83292d0"
+    }
+  ],
+  "control_files": [
+    "SHA256SUMS",
+    "review-manifest.json"
+  ],
+  "safety": "No firmware/decrypted images/keys/captures/databases. Metadata and tests do not establish camera recording."
+}

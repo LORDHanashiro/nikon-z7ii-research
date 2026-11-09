@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+/build/
+/.cache/
+/firmware/
+*.bin
+*.rom
+*.img
+*.gpr
+*.rep/
+*.pcap*
+.env*
+*.key
+*.pem

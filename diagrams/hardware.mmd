@@ -1,0 +1,10 @@
+flowchart LR
+  CMOS -.->|"UNKNOWN"| ISP
+  ISP -.->|"true N-Log pixel source UNKNOWN"| RAM
+  ISP -.->|"physical upstream route UNKNOWN"| HDMI
+  RAM -.->|"format and valid bits UNKNOWN"| ENCODER
+  RAM -.->|"ownership and completion UNKNOWN"| DMA
+  DMA -.->|"bus and card integration UNKNOWN"| STORAGE
+  MAS -->|VERIFIED static address-word publication only| PORTS
+  PORTS -.->|"physical owner / DMA binding UNKNOWN"| DMA
+  QEMU[QEMU functional models] -.->|"not physical capability proof"| ISP

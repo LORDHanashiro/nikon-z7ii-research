@@ -1,0 +1,41 @@
+{
+  "snapshot": "initial publication preparation, 2026-11-09",
+  "host_unit_tests": {
+    "passed": 6,
+    "failed": 0,
+    "scope": "finite self-authored synthetic and index tests"
+  },
+  "synthetic_recorder": {
+    "scope": "Publication HOST-only synthetic smoke test, no camera evidence",
+    "compiler_exit": 0,
+    "recorder_exit": 0,
+    "reader": {
+      "frames": 2,
+      "width": 130,
+      "height": 37,
+      "row_stride": 384,
+      "samples": 19240,
+      "distinct_codes": 1024,
+      "low2_histogram": [
+        4810,
+        4810,
+        4810,
+        4810
+      ],
+      "sha_scope": "all samples checked against independent synthetic formula, not real precision measurement"
+    }
+  },
+  "ghidra_script": {
+    "compiled": true,
+    "api": "Ghidra 12.2 PUBLIC",
+    "executed_on_firmware_project": false
+  },
+  "initial_failures_preserved": [
+    "EX graph lacked node table; added UNKNOWN blank-address index endpoints",
+    "Closed two CSV file handles",
+    "Used actual available Ghidra DEFAULT_HANDLER API after failed compile"
+  ],
+  "camera_validation": false,
+  "internal_10bit_nlog_recording_implemented": false,
+  "encoder_10bit_support": "UNKNOWN"
+}
